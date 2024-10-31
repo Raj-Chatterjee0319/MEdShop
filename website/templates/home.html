@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{%block head%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Store</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styleshome.css')}}">
+{%endblock head%}
+{%block body%}
+    <header>    
+        <div class="container">
+            <h1>MedShop</h1>
+            <nav>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/logout">Log Out</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to Your Trusted Medical Store</h2>
+            <p>Offering a wide range of medications and health products.</p>
+            <a href="/shopnow" class="btn-primary">Shop Now</a>
+        </div>
+    </section>
+    <section id="products">
+        <div class="container">
+            <h2 align="center">Our Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="\static\photo2.jpg" alt="Product 1">
+                    <h3>Medicines</h3>
+                </div>
+                <div class="product-card">
+                    <img src="\static\photo3.jpg" alt="Product 2">
+                    <h3>Medical Equipment</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Feel free to reach out to us for any inquiries.</p>
+            <address>
+                <p>Email: <a href="mailto:info@medicalstore.com">info@medicalstore.com</a></p>
+                <p>Phone: +123 456 7890</p>
+                <p>Address: 123 Medical St, Health City</p>
+            </address>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Medical Store. All rights reserved.</p>
+        </div>
+    </footer>
+{%endblock body%}

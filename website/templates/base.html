@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>{%block head%} {%endblock%}</head>
+    <body>
+        {%block body%} 
+        <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            const firebaseConfig = {
+              apiKey: "AIzaSyCQZxuSeqJn0yBN4peOeU_rXL5aDPm0ask",
+              authDomain: "medshop-4a7b8.firebaseapp.com",
+              projectId: "medshop-4a7b8",
+              storageBucket: "medshop-4a7b8.firebasestorage.app",
+              messagingSenderId: "155367838806",
+              appId: "1:155367838806:web:f60622e05c64fa20b897f7",
+              measurementId: "G-WD71K3ZNXT"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+          </script>
+        {%endblock%}
+    </body>
+</html>

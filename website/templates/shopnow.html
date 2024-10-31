@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{%block head%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Product Page</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='shopnow.css')}}">
+{%endblock head%}
+{%block body%}
+<header>
+    <nav class="navbar">
+            <a href="/home">MedShop</a>
+        <ul class="nav-links">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/shopnow">Products</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div id="products">
+        <h2>Products</h2>
+        <div class="product">
+            <span>Paracetamol - $10</span>
+            <button onclick="addToCart('Product A', 10)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <span>Acetaminophen (Tylenol) - $15</span>
+            <button onclick="addToCart('Product B', 15)">Add to Cart</button>
+        </div>
+        <div class="product">
+            <span>Viscodyne - $20</span>
+            <button onclick="addToCart('Product C', 20)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div id="cart">
+        <h2>Cart</h2>
+        <ul id="cart-items"></ul>
+        <p id="total-price">Total: $0</p>
+        <a href="/placeorder">
+        <button onclick="placeOrder()">Place Order</button>
+        </a>
+    </div>
+
+    <script src="static/script.js"></script>
+</main>
+
+
+{%endblock body%}
